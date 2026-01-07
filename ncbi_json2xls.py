@@ -2,7 +2,7 @@
 """
 Created on Fri Jan 14 14:25:45 2022
 
-@author: Administrator
+@author: zhengshang@frasergen.com zhengshang-zn@qq.com
 """
 import sys
 import re
@@ -53,3 +53,4 @@ for i in range(len(sp_list)):
         chr_num="NA"
     f.write(sci_name+'\t'+ass_level+'\t'+ass_id+'\t'+chr_num+'\t'+N50+'\t'+seq_len+'\t'+gene_num+'\t'+genome_path+'\t'+gff_path+'\t'+busco_lineage+'\t'+sequencing_tech+'\t'+sub_date+'\n')
 f.close()
+
