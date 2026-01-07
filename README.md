@@ -8,9 +8,11 @@
 
 ## Quick start
 ```bash
+git clone https://github.com/zskey-zn/EukGenomeStats.git
+chmod +x datasets_v15.12.0
 prefix=`date "+%Y-%m-%d"` && \
 # 下载json文件，可能由于网络问题中断，需要重新下载
-datasets summary genome taxon "Eukaryota" > Eukaryota.${prefix}.json && \
+./datasets_v15.12.0 summary genome taxon "Eukaryota" > Eukaryota.${prefix}.json && \
 #装换成表格
 python3 ncbi_json2xls.py Eukaryota.${prefix}.json Eukaryota.${prefix}.xls
 ```
