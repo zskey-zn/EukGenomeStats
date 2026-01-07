@@ -11,8 +11,8 @@
 git clone https://github.com/zskey-zn/EukGenomeStats.git
 chmod +x datasets_v15.12.0
 prefix=`date "+%Y-%m-%d"` && \
-# 下载json文件，可能由于网络问题中断，需要重新下载
+# 使用 NCBI datasets 命令行工具，获取所有真核生物基因组的摘要信息，并保存为带日期的 JSON 文件(可能由于网络问题中断，需要重新下载)
 ./datasets_v15.12.0 summary genome taxon "Eukaryota" > Eukaryota.${prefix}.json && \
-#装换成表格
+#加载 Python 环境，运行解析脚本将 JSON 转换为结构化的 Excel 表格：
 python3 ncbi_json2xls.py Eukaryota.${prefix}.json Eukaryota.${prefix}.xls
 ```
