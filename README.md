@@ -9,6 +9,7 @@
 ## Quick start
 ```bash
 git clone https://github.com/zskey-zn/EukGenomeStats.git
+cd EukGenomeStats
 chmod +x datasets_v15.12.0
 prefix=`date "+%Y-%m-%d"` && \
 # 使用 NCBI datasets 命令行工具，获取所有真核生物基因组的摘要信息，并保存为带日期的 JSON 文件(可能由于网络问题中断，需要重新下载)
